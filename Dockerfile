@@ -9,6 +9,7 @@ RUN bundle install
 
 COPY . /app
 
+ENV RACK_ENV "production"
 CMD puma -C config/puma.rb
 EXPOSE 3000
 
