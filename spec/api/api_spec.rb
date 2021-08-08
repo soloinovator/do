@@ -8,8 +8,8 @@ RSpec.describe API do
   let(:app) { described_class }
 
   let(:content) { { "CONTENT_TYPE" => "application/json" } }
-  let(:request) { { "username":"xyz","upload":"xyz" }.to_json }
-  let(:response) { { "username":"xyz","upload":"xyz","echoed": true }.to_json }
+  let(:request) { { username: "xyz", upload: "xyz" }.to_json }
+  let(:response) { { username: "xyz", upload: "xyz", echoed: true }.to_json }
 
   context "#post /api/echo" do
     before do

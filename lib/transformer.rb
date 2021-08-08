@@ -9,7 +9,8 @@ class Transformer
   end
 
   def transform
-    raise FieldExistsError, "Echoed field exists" if echoed?
+    raise FieldExistsError.new("Echoed field exists") if echoed?
+
     @json["echoed"] = true
     @json
   end
