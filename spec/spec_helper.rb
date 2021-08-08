@@ -5,6 +5,7 @@ require "faker"
 require "pry"
 require "rack/test"
 
+require_relative "../lib/transformer"
 require_relative "../api/api"
 
 RSpec.configure do |config|
