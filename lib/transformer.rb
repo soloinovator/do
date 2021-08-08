@@ -15,6 +15,8 @@ class Transformer
     @json
   end
 
+  private
+
   def echoed?
     @json.keys.include?("echoed")
   end
