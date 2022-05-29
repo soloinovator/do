@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem "prometheus-client"
 gem "puma"
 gem "puma-metrics"
-gem "rack"
+gem "rack", ">= 2.2.3.1"
 gem "syro"
 
 group :development do
