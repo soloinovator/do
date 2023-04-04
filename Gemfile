@@ -3,9 +3,9 @@
 source "https://rubygems.org"
 
 gem "prometheus-client"
-gem "puma"
+gem "puma", ">= 5.6.4"
 gem "puma-metrics"
-gem "rack"
+gem "rack", ">= 3.0.0"
 gem "syro"
 
 group :development do
@@ -18,7 +18,7 @@ end
 group :test do
   gem "factory_bot"
   gem "faker"
-  gem "rack-test"
+  gem "rack-test", ">= 2.0.0"
   gem "rspec"
   gem "rubocop-rspec", require: false
 end
