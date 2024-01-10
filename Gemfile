@@ -3,8 +3,8 @@
 source "https://rubygems.org"
 
 gem "prometheus-client"
-gem "puma"
-gem "puma-metrics"
+gem "puma", ">= 5.6.8"
+gem "puma-metrics", ">= 1.2.4"
 gem "rack"
 gem "syro"
 

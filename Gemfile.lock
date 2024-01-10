@@ -19,19 +19,19 @@ GEM
       concurrent-ruby (~> 1.0)
     method_source (1.0.0)
     minitest (5.14.4)
-    nio4r (2.5.8)
+    nio4r (2.7.0)
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
-    prometheus-client (2.1.0)
+    prometheus-client (4.2.2)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    puma (5.4.0)
+    puma (6.4.2)
       nio4r (~> 2.0)
-    puma-metrics (1.2.3)
+    puma-metrics (1.3.0)
       prometheus-client (>= 0.10)
-      puma (>= 3.0)
+      puma (>= 6.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -81,6 +81,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  ruby
   x86_64-darwin-20
 
 DEPENDENCIES
@@ -88,8 +89,8 @@ DEPENDENCIES
   faker
   prometheus-client
   pry
-  puma
-  puma-metrics
+  puma (>= 5.6.8)
+  puma-metrics (>= 1.2.4)
   rack
   rack-test
   rspec
@@ -100,4 +101,4 @@ DEPENDENCIES
   syro
 
 BUNDLED WITH
-   2.2.14
+   2.1.4
