@@ -10,7 +10,7 @@ gem "syro"
 
 group :development do
   gem "pry"
-  gem "rt_rubocop_defaults", require: false
+  gem "rt_rubocop_defaults", ">= 2.4.0", require: false
   gem "rubocop_runner", "~> 2.1", require: false
   gem "shotgun"
 end
@@ -20,5 +20,5 @@ group :test do
   gem "faker"
   gem "rack-test"
   gem "rspec"
-  gem "rubocop-rspec", require: false
+  gem "rubocop-rspec", ">= 2.2.0", require: false
 end
