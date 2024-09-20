@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "prometheus-client"
-gem "puma"
+gem "puma", ">= 5.6.9"
 gem "puma-metrics"
 gem "rack"
 gem "syro"
