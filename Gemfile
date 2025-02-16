@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem "prometheus-client"
 gem "puma"
 gem "puma-metrics"
-gem "rack"
+gem "rack", ">= 2.2.11"
 gem "syro"
 
 group :development do
@@ -20,5 +20,5 @@ group :test do
   gem "faker"
   gem "rack-test"
   gem "rspec"
-  gem "rubocop-rspec", require: false
+  gem "rubocop-rspec", ">= 3.5.0", require: false
 end
