@@ -4,21 +4,21 @@ source "https://rubygems.org"
 
 gem "prometheus-client"
 gem "puma"
-gem "puma-metrics"
+gem "puma-metrics", ">= 1.2.4"
 gem "rack"
 gem "syro"
 
 group :development do
   gem "pry"
-  gem "rt_rubocop_defaults", require: false
+  gem "rt_rubocop_defaults", ">= 2.4.0", require: false
   gem "rubocop_runner", "~> 2.1", require: false
   gem "shotgun"
 end
 
 group :test do
-  gem "factory_bot"
+  gem "factory_bot", ">= 6.2.1"
   gem "faker"
-  gem "rack-test"
+  gem "rack-test", ">= 2.0.0"
   gem "rspec"
   gem "rubocop-rspec", require: false
 end
