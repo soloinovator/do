@@ -7,7 +7,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    ast (2.4.2)
+    ast (2.4.3)
     coderay (1.1.3)
     concurrent-ruby (1.1.9)
     diff-lcs (1.4.4)
@@ -17,12 +17,17 @@ GEM
       i18n (>= 1.6, < 2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    json (2.15.0)
+    language_server-protocol (3.17.0.5)
+    lint_roller (1.1.0)
     method_source (1.0.0)
     minitest (5.14.4)
     nio4r (2.5.8)
-    parallel (1.20.1)
-    parser (3.0.2.0)
+    parallel (1.27.0)
+    parser (3.3.9.0)
       ast (~> 2.4.1)
+      racc
+    prism (1.5.1)
     prometheus-client (2.1.0)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -32,12 +37,12 @@ GEM
     puma-metrics (1.2.3)
       prometheus-client (>= 0.10)
       puma (>= 3.0)
-    rack (2.2.3)
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
-    rainbow (3.0.0)
-    regexp_parser (2.1.1)
-    rexml (3.2.5)
+    racc (1.8.1)
+    rack (3.2.1)
+    rack-test (2.2.0)
+      rack (>= 1.3)
+    rainbow (3.1.1)
+    regexp_parser (2.11.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -51,24 +56,28 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
-    rt_rubocop_defaults (2.3.1)
-      rubocop (~> 1.5)
-    rubocop (1.18.4)
+    rt_rubocop_defaults (2.8.1)
+      rubocop (~> 1.61)
+      rubocop-rspec (~> 3.1)
+    rubocop (1.81.1)
+      json (~> 2.3)
+      language_server-protocol (~> 3.17.0.2)
+      lint_roller (~> 1.1.0)
       parallel (~> 1.10)
-      parser (>= 3.0.0.0)
+      parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
-      rexml
-      rubocop-ast (>= 1.8.0, < 2.0)
+      regexp_parser (>= 2.9.3, < 3.0)
+      rubocop-ast (>= 1.47.1, < 2.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.9.0)
-      parser (>= 3.0.1.1)
-    rubocop-rspec (2.1.0)
-      rubocop (~> 1.0)
-      rubocop-ast (>= 1.1.0)
+      unicode-display_width (>= 2.4.0, < 4.0)
+    rubocop-ast (1.47.1)
+      parser (>= 3.3.7.2)
+      prism (~> 1.4)
+    rubocop-rspec (3.7.0)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
     rubocop_runner (2.2.0)
-    ruby-progressbar (1.11.0)
+    ruby-progressbar (1.13.0)
     seg (1.2.0)
     shotgun (0.9.2)
       rack (>= 1.0)
@@ -77,11 +86,14 @@ GEM
       seg
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.0.0)
+    unicode-display_width (3.2.0)
+      unicode-emoji (~> 4.1)
+    unicode-emoji (4.1.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   factory_bot
@@ -90,14 +102,14 @@ DEPENDENCIES
   pry
   puma
   puma-metrics
-  rack
-  rack-test
+  rack (>= 2.2.18)
+  rack-test (>= 2.0.0)
   rspec
-  rt_rubocop_defaults
-  rubocop-rspec
+  rt_rubocop_defaults (>= 2.4.0)
+  rubocop-rspec (>= 2.2.0)
   rubocop_runner (~> 2.1)
   shotgun
   syro
 
 BUNDLED WITH
-   2.2.14
+   2.3.27
